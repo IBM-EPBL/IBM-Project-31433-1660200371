@@ -1,1 +1,102 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTRATION PAGE</title>
+</head>
+<style>
+    body {
+        background-image: linear-gradient(92.7deg, rgb(59, 170, 201) 8.5%, rgb(246, 244, 198) 90.2%);
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    input:hover {
+        border-color: rgb(25, 20, 20);
+    }
+
+    button:hover {
+        background-color: dark blue;
+        border-color: black;
+    }
+
+    h1 {
+        font-family: 'Courier New', Courier, monospace;
+        color: darkolivegreen;
+    }
+
+    #qwerty {
+        margin-top: 15em;
+    }
+</style>
+
+<body>
+    <center id="qwerty">
+        <H1>REGISTRATION FORM</H1>
+        <!--  -->
+        <form action="http://localhost:5000/register" method="POST">
+            <table>
+                <tr>
+                    <td><label for="text">USERNAME</label></td>
+                    <td>&nbsp;</td>
+                    <td><input type="text" placeholder="Enter Username" name="username" id="username"></td>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr>
+                    <td><label for="text">EMAIL ID</label></td>
+                    <td>&nbsp;</td>
+                    <td><input type="text" placeholder="Enter email id" name="email_id" id="email_id"></td>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr>
+                    <td><label for="text">PHONE NUMBER</label></td>
+                    <td>&nbsp;</td>
+                    <td><input type="text" placeholder="Enter phone number" name="phone_no" id="phone_no"></td>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr>
+                    <td><label for="text">PASSWORD</label></td>
+                    <td>&nbsp;</td>
+                    <td><input type="text" placeholder="Enter password" name="password" id="password"></td>
+                </tr>
+
+                <tr></tr>
+                <tr></tr>
+            </table>
+            <br>
+            <center><button onclick="asd()" type="submit">Submit</button>
+            </center>
+        </form>
+    </center>
+</body>
+<script>
+    function asd() {
+        var username1 = document.getElementById("username");
+        var email_id = document.getElementById('email_id');
+        var phone_no = document.getElementById('phone_no');
+        var password = document.getElementById('password');
+        if (username1.value == "" || phone_no.value == "" || password.value == "") {
+            username.style.borderColor = "red";
+        }
+        else if (email_id.value == "") {
+            email_id.style.borderColor = "red";
+        }
+        else if (phone_no.value == "") {
+            phone_no.style.borderColor = "red";
+        }
+        else if (phone_no.value == "") {
+            password.style.borderColor = "red";
+        }
+
+
+    }
+
+
+</script>
+
+</html>
