@@ -1,1 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap");
+// GLOBAL COLOR
+$greenColor: #33691e;
+$redColor: #f50057;
+$baseColor: #1b73e8;
 
+// BASE ELEMENTS
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Google Sans";
+  background-color: #f4f4f4;
+}
+.customContainer {
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+#logo {
+  margin-left: 1.5rem;
+  font-size: 25px;
+  color: $baseColor;
+  font-family: "Balsamiq Sans", cursive;
+}
+.menu {
+  color: $baseColor;
+}
+.section {
+  height: 100vh;
+}
+a[href^="http"] {
+  border-bottom: 1px solid;
+}
+#bannerText {
+  font-size: clamp(1rem, 15vw, 3rem);
+  font-family: "Righteous", cursive;
+
+  #plasma {
+    color: $redColor;
+  }
+  #life {
+    color: $greenColor;
+  }
+}
+#subBanner {
+  line-height: 2rem;
+}
+.donorBtn {
+  background: $baseColor;
+  color: #ffffff;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 4px 3px;
+  height: 3rem;
+  width: 15rem;
+  text-align: center;
+  text-transform: none;
+  font-size: 1em;
+  border-radius: 5px;
+}
+ul {
+  .btn-flat {
+    font-weight: 600;
+    color: $baseColor;
+    text-transform: none;
+  }
+}
+
+.donor {
+  color: $baseColor;
+}
+
+.icon {
+  height: 80px;
+  width: 80px;
+  border-radius: 15%;
+  transition: all 0.5s;
+
+  &:hover {
+    -webkit-box-shadow: 0px 6px 44px -16px $baseColor;
+    -moz-box-shadow: 0px 6px 44px -16px $baseColor;
+    box-shadow: 0px 6px 44px -16px $baseColor;
+  }
+}
+
+thead {
+  color: #9a67f3;
+}
+
+// CUSTOM SCROLLBAR
+.custom-scrollbar {
+  width: auto;
+  height: 50rem;
+  overflow-y: scroll;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #9c9c9e;
+  border-radius: 12px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #094ee4;
+  border-radius: 12px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #313131;
+  border-radius: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #c4c4c4;
+  border-radius: 12px;
+}
+
+// HOVER ANIMATION
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: $baseColor;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: $baseColor;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.register-img {
+  margin-top: 15%;
+}
+.rounded {
+  border-radius: 10px;
+}
+.credentialCard {
+  margin-top: 8%;
+}
+.input-field input:focus + label {
+  color: rgb(0, 17, 255) !important;
+}
+/* label underline focus color */
+.row .input-field input:focus {
+  border-bottom: 1px solid rgb(0, 17, 255) !important;
+  box-shadow: 0 1px 0 0 rgb(0, 17, 255) !important;
+}
+.input-field textarea:focus + label {
+  color: rgb(0, 17, 255) !important;
+}
+/* label underline focus color */
+.row .input-field textarea:focus {
+  border-bottom: 1px solid rgb(0, 17, 255) !important;
+  box-shadow: 0 1px 0 0 rgb(0, 17, 255) !important;
+}
+#share_story {
+  background: #fff;
+}
+.header {
+  margin-top: 1rem;
+  margin-left: 1.5rem;
+  font-size: 2em;
+  color: $greenColor;
+}
+.btnRounded {
+  border-radius: 5px;
+}
+.btn {
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: none;
+}
+
+.title {
+  color: $baseColor;
+  font-size: 2.5em;
+}
+.subTitle {
+  color: $baseColor;
+}
+
+.profileDlt {
+  background: #fff;
+  color: $redColor;
+  border: 1px solid $redColor;
+  font-weight: 600;
+  text-transform: none;
+
+  &:hover {
+    background: $redColor;
+    color: #fff;
+  }
+}
+.topMargin {
+  margin-top: 2rem;
+}
+.available {
+  color: $greenColor;
+}
+.unavailable {
+  color: $redColor;
+}
+
+.switch label input[type="checkbox"]:checked + .lever {
+  background-color: $baseColor;
+}
+
+.switch label input[type="checkbox"]:checked + .lever:after {
+  background-color: $baseColor;
+}
+
+.switch {
+  margin-left: 12px;
+}
+
+.tabs {
+  background: transparent;
+}
+.tabs .tab a {
+  color: #8787ce;
+}
+
+.tabs .tab a:focus,
+.tabs .tab a:focus.active {
+  background-color: transparent;
+  outline: 0;
+}
+
+.tabs .tab a.active,
+.tabs .tab a:hover {
+  background-color: transparent;
+  color: #3754e7ee;
+}
+
+.tabs .indicator {
+  background-color: #3754e7ee;
+}
+
+@media only screen and (max-width: 540px) {
+  .custom-scrollbar {
+    height: 100%;
+  }
+}
